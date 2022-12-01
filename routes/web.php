@@ -1,6 +1,7 @@
 <?php
 
 use App\Modules\Auth\Http\Controllers\LoginFormController;
+use App\Modules\Auth\Http\Controllers\RegisterFormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,7 @@ Route::middleware('auth')->get('/', function () {
     return view('app');
 });
 
-
-Route::get('/login', LoginFormController::class)->name('login');
+Route::middleware('guest')->group(function () {
+    Route::get('/login', LoginFormController::class)->name('login');
+    Route::get('/register', RegisterFormController::class)->name('register');
+});
