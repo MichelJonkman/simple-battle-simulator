@@ -14,11 +14,11 @@
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" value="{{ old('password') }}">
+            <input type="password" class="form-control" id="password" name="password" value="">
         </div>
         <div class="mb-3">
             <label for="password-repeat" class="form-label">Repeat password</label>
-            <input type="password" class="form-control" id="password-repeat" name="password_repeat" value="{{ old('password_repeat') }}">
+            <input type="password" class="form-control" id="password-repeat" name="password_repeat" value="">
         </div>
         <button class="btn btn-primary">Create</button>
         <a class="btn btn-secondary" href="/login">Back</a>
