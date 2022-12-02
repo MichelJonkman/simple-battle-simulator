@@ -1,16 +1,12 @@
 <template>
     <div class="container">
         <Navbar/>
-        <h1>Simple Battle Simulator</h1>
+        <slot/>
     </div>
 </template>
 
 <script lang="ts" setup async>
-import {API} from "../Classes/API";
-import Navbar from "./Layout/Navbar.vue";
-
-console.log(await API.Battle.test())
-
+import Navbar from "./Components/Navbar.vue";
 </script>
 
 

@@ -7,7 +7,7 @@
         <title>Simple Battle Simulator</title>
     </head>
     <body>
-        <div id="app"></div>
+        <div id="app" data-app="{{ json_encode($data) }}"></div>
 
         @routes
         @vite('resources/ts/app.ts')
