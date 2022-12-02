@@ -9,6 +9,7 @@
     <body>
         <div id="app"></div>
 
+        @routes
         @vite('resources/ts/app.ts')
     </body>
 </html>
