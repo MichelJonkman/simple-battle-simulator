@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <a :href="route('auth.deactivate')">Deactivate</a>
-        <h1>Simple Battle Simulator</h1>
-    </div>
+    <Suspense>
+        <Main/>
+    </Suspense>
 </template>
 
 <script lang="ts" setup>
+import Main from "./Components/Main.vue";
 </script>
 
 <style lang="scss" scoped>
