@@ -1081,7 +1081,7 @@
 //
 // scss-docs-start nav-variables
 //$nav-link-padding-y:                .5rem;
-//$nav-link-padding-x:                1rem;
+//$nav-link-padding-x:                1.5rem;
 //$nav-link-font-size:                null;
 //$nav-link-font-weight:              null;
 //$nav-link-color:                    $link-color;
@@ -1109,7 +1109,7 @@
 //$navbar-padding-y:                  $spacer * .5;
 //$navbar-padding-x:                  null;
 //
-//$navbar-nav-link-padding-x:         .5rem;
+$navbar-nav-link-padding-x:         .75rem;
 //
 //$navbar-brand-font-size:            $font-size-lg;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -1134,9 +1134,9 @@
 //$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 //$navbar-dark-toggler-border-color:  rgba($white, .1);
 //
-//$navbar-light-color:                rgba($black, .55);
-//$navbar-light-hover-color:          rgba($black, .7);
-//$navbar-light-active-color:         rgba($black, .9);
+$navbar-light-color:                $white;
+$navbar-light-hover-color:          $white;
+$navbar-light-active-color:         $white;
 //$navbar-light-disabled-color:       rgba($black, .3);
 //$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 //$navbar-light-toggler-border-color: rgba($black, .1);

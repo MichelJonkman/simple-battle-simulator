@@ -30,6 +30,13 @@ export default defineConfig(({command, mode, ssrBuild}) => {
             }),
             ...extraPlugins
         ],
+        css: {
+            preprocessorOptions: {
+                scss: {
+                    additionalData: `@import "./resources/scss/_config.scss";`,
+                },
+            }
+        },
         resolve: {
             alias: {
                 '@': '/resources/ts'
