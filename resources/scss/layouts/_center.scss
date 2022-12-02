@@ -32,8 +32,8 @@
         max-width: 40rem;
 
         padding: 1rem;
-        border-radius: .5rem;
+        border-radius: $border-radius-lg;
 
-        background-color: darken($body-bg, 3%);
+        background-color: $body-bg;
     }
 }

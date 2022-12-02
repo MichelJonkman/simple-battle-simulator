@@ -3,12 +3,12 @@
 namespace App\Modules\Auth\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\Auth\Http\Requests\RegisterRequest;
+use App\Modules\Auth\Http\Requests\NewRequest;
 use App\Modules\Auth\Services\AuthService;
 
-class RegisterController extends Controller
+class NewController extends Controller
 {
-    public function __invoke(RegisterRequest $request, AuthService $authService)
+    public function __invoke(NewRequest $request, AuthService $authService)
     {
         $authService->createGame($request);
 

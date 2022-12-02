@@ -6,7 +6,7 @@ use App\Models\Game;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class RegisterRequest extends FormRequest
+class NewRequest extends FormRequest
 {
     public function rules(): array
     {

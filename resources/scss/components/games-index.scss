@@ -1,0 +1,22 @@
+.games {
+    .game {
+        $bg: darken($body-bg, 3%);
+
+        width: 100%;
+        display: block;
+        padding: 1rem;
+        border-radius: $border-radius-lg;
+
+        background-color: $bg;
+
+        text-decoration: none;
+        color: $body-color;
+        font-size: 1.5rem;
+
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            background-color: rgba($bg, 0.5);
+        }
+    }
+}

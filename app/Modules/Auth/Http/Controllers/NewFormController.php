@@ -4,10 +4,10 @@ namespace App\Modules\Auth\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
-class LoginFormController extends Controller
+class NewFormController extends Controller
 {
     public function __invoke()
     {
-        return view('modules.auth.login_form');
+        return view('modules.auth.new_form');
     }
 }

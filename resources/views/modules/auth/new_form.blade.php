@@ -21,6 +21,6 @@
             <input type="password" class="form-control" id="password-repeat" name="password_repeat" value="">
         </div>
         <button class="btn btn-primary">Create</button>
-        <a class="btn btn-secondary" href="/login">Back</a>
+        <a class="btn btn-secondary" href="{{ route('auth.games') }}">Back</a>
     </form>
 @endsection
