@@ -10,6 +10,6 @@ class AuthService
 {
     public function createGame(NewRequest $request)
     {
-        return Game::create($request->all());
+        return Game::create($request->validated());
     }
 }

@@ -32,7 +32,8 @@ export class API {
         return this.request('GET', input, init);
     }
 
-    public static async post(
+    protected static async withPayload(
+        method: 'POST' | 'PUT',
         input: RequestInfo | URL,
         body: Object,
         init?: RequestInit
@@ -41,7 +42,18 @@ export class API {
 
         init.body = JSON.stringify(body);
 
-        return this.request('POST', input, init);
+        init.headers = new Headers(init.headers);
+        init.headers.set('content-type', 'application/json');
+
+        return this.request(method, input, init);
+    }
+
+    public static async post(
+        input: RequestInfo | URL,
+        body: Object,
+        init?: RequestInit
+    ) {
+        return this.withPayload('POST', input, body, init);
     }
 
     public static async put(
@@ -49,11 +61,7 @@ export class API {
         body: Object,
         init?: RequestInit
     ) {
-        init = init ? init : {};
-
-        init.body = JSON.stringify(body);
-
-        return this.request('PUT', input, init);
+        return this.withPayload('PUT', input, body, init);
     }
 
     public static async delete(
