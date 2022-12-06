@@ -1,4 +1,5 @@
 import {Battle} from "./API/Battle";
+import {csrf_token} from "../helpers";
 
 export class API {
 
@@ -9,16 +10,15 @@ export class API {
         input: RequestInfo | URL,
         init?: RequestInit
     ) {
-        init = init ? init : {};
+        init = init ? init : {} as RequestInit;
 
         init.method = method;
 
-        if(!init.headers) {
-            init.headers = {};
-        }
+        init.headers = new Headers(init.headers);
 
-        init.headers['accepts'] = 'application/json';
-        init.headers['X-Requested-With'] = 'XMLHttpRequest';
+        init.headers.set('accepts', 'application/json');
+        init.headers.set('X-Requested-With', 'XMLHttpRequest');
+        init.headers.set('X-CSRF-TOKEN', csrf_token());
 
         const response = await fetch(input, init);
 
@@ -37,6 +37,8 @@ export class API {
         body: Object,
         init?: RequestInit
     ) {
+        init = init ? init : {};
+
         init.body = JSON.stringify(body);
 
         return this.request('POST', input, init);
@@ -47,6 +49,8 @@ export class API {
         body: Object,
         init?: RequestInit
     ) {
+        init = init ? init : {};
+
         init.body = JSON.stringify(body);
 
         return this.request('PUT', input, init);

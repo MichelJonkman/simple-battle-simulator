@@ -1,5 +1,3 @@
-import { App } from "vue";
-
 export interface DataPluginInterface {
     game: {
         id: number,
@@ -12,7 +10,7 @@ export interface DataPluginInterface {
 }
 
 export default {
-    install(app: App) {
+    install(app) {
         const data: DataPluginInterface = JSON.parse(document.querySelector('#app').getAttribute('data-app'));
 
         app.config.globalProperties.$app = data;

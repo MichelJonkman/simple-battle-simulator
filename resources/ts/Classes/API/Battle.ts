@@ -3,8 +3,12 @@ import {route} from "../../helpers";
 
 export class Battle {
 
-    public async test() {
-        return API.get(route('test'));
+    public async create(battle: BattleInterface) {
+        return API.post(route('api.battle.create'), battle);
     }
 
+}
+
+export interface BattleInterface {
+    name: string;
 }

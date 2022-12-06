@@ -11,6 +11,6 @@ class ActivateController extends Controller
     {
         $request->authenticate($game);
 
-        return redirect()->route('home');
+        return redirect()->route('app');
     }
 }

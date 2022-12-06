@@ -15,9 +15,6 @@
 
     @stack('meta')
 
-    @push('styles')
-        @vite('resources/scss/app.scss')
-    @endpush
     @stack('styles')
 </head>
 <body @yield('body', '')>
