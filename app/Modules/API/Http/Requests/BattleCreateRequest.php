@@ -11,7 +11,7 @@ class BattleCreateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', Rule::unique(Battle::class)],
+            'name' => ['required', Rule::unique(Battle::class)]
         ];
     }
 }

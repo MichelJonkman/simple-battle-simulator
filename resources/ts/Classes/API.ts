@@ -1,5 +1,6 @@
 import {Battle} from "./API/Battle";
 import {csrf_token} from "../helpers";
+import {formErrors} from "./FormErrors";
 
 export class API {
 
@@ -21,8 +22,14 @@ export class API {
         init.headers.set('X-CSRF-TOKEN', csrf_token());
 
         const response = await fetch(input, init);
+        const json = await response.json();
 
-        return await response.json();
+        if(response.status === 422) {
+            formErrors.errors = json.errors;
+            return null;
+        }
+
+        return json;
     }
 
     public static async get(
