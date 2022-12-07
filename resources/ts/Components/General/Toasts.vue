@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="toast-container">
         <Toast v-for="toast in toasts.toasts" :toast="toast"/>
     </div>
 </template>

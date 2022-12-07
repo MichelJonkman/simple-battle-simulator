@@ -9,14 +9,18 @@ class Toasts {
         }
 
         this.toasts[toast.uuid] = toast;
-        console.log('add', toast);
 
         toast.timeout = window.setTimeout(() => {
             if (toast.uuid) {
-                console.log('Delete ', toast);
                 delete this.toasts[toast.uuid];
             }
         }, toast.ttl);
+    }
+
+    public removeToast(uuid: string) {
+        if (uuid) {
+            delete this.toasts[uuid];
+        }
     }
 }
 

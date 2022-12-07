@@ -1,8 +1,6 @@
 <template>
     <DefaultLayout>
         <RouterLink class="btn btn-primary" :to="{ name: 'battle.new' }">New battle</RouterLink>
-
-        <button @click="toasts.addToast({name: 'test', content: 'testje', ttl: 2000})">test</button>
     </DefaultLayout>
 </template>
 

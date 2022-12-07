@@ -1,8 +1,9 @@
 {
     "extends": "@vue/tsconfig/tsconfig.json",
     "compilerOptions": {
+        "baseUrl": "resources",
         "paths": {
-            "@": ["/resources/ts/*"]
+            "@/*": ["ts/*"]
         }
     }
 }
