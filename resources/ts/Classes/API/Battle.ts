@@ -4,7 +4,7 @@ import {route} from "../../helpers";
 export class Battle {
 
     public async index() {
-        return API.get(route('api.battle.index'));
+        return (await API.get(route('api.battle.index'))).data;
     }
 
     public async create(battle: BattleInterface) {

@@ -23,6 +23,7 @@ defineProps<{
         padding-left: .75rem;
         padding-right: .75rem;
 
+        border-radius: 0;
         color: $body-color;
         background: rgba($body-bg, 0.25);
 

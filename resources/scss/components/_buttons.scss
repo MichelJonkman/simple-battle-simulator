@@ -1,0 +1,14 @@
+.btn-dark {
+    position: relative;
+
+    @include button-variant(
+        darken($body-bg, 2%),
+        darken($body-bg, 2%),
+        $hover-background: $primary,
+        $hover-border: $primary,
+    );
+
+    &:focus {
+        z-index: 1;
+    }
+}
