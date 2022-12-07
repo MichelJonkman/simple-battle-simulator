@@ -1,6 +1,7 @@
 import {Battle} from "./API/Battle";
 import {csrf_token} from "../helpers";
 import {formErrors} from "./FormErrors";
+import {toasts} from "@/Classes/Toasts.js";
 
 export class API {
 
@@ -24,8 +25,24 @@ export class API {
         const response = await fetch(input, init);
         const json = await response.json();
 
-        if(response.status === 422) {
+        if (response.status === 422) {
             formErrors.errors = json.errors;
+            return null;
+        }
+
+        if (response.status === 404) {
+            toasts.addToast({
+                title: '404 not found',
+                content: 'A 404 error has occurred.'
+            });
+            return null;
+        }
+
+        if (response.status === 500) {
+            toasts.addToast({
+                title: '500 error',
+                content: 'An unexpected error has occurred.'
+            });
             return null;
         }
 
