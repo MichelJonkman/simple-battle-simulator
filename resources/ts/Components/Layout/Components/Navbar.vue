@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="d-flex w-100 justify-content-end">
-            <RouterLink class="navbar-brand" :to="{name: 'battles.index'}">{{ $app.game.name }}</RouterLink>
+            <RouterLink class="navbar-brand" :to="{name: 'battle.index'}">{{ $app.game.name }}</RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>

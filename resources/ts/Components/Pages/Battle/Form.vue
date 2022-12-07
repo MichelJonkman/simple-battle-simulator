@@ -10,7 +10,7 @@
                 <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <button class="btn btn-primary">Create</button>
-            <RouterLink class="btn btn-secondary ms-2" :to="{ name: 'battles.index' }">Back</RouterLink>
+            <RouterLink class="btn btn-secondary ms-2" :to="{ name: 'battle.index' }">Back</RouterLink>
         </form>
     </DefaultLayout>
 </template>
@@ -37,7 +37,7 @@ async function submit(e: Event) {
     }
 
     await router.push({
-        name: 'battles.index'
+        name: 'battle.index'
     });
 }
 </script>

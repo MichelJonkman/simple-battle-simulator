@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <Toasts/>
         <Navbar/>
         <slot/>
     </div>
@@ -7,6 +8,7 @@
 
 <script lang="ts" setup async>
 import Navbar from "./Components/Navbar.vue";
+import Toasts from "../General/Toasts.vue";
 </script>
 
 

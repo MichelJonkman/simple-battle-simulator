@@ -12,6 +12,6 @@ class NewController extends Controller
     {
         $authService->createGame($request);
 
-        return redirect()->route('games')->with('alert-success', 'Successfully created new game');
+        return redirect()->route('auth.games')->with('alert-success', 'Successfully created new game');
     }
 }

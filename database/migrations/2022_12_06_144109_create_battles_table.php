@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Battle;
+use App\Models\Game;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,9 +12,9 @@ return new class extends Migration {
             $table->id();
 
             $table->string('name');
-            $table->foreignIdFor(Battle::class);
+            $table->foreignIdFor(Game::class);
 
-            $table->unique(['name', 'battle_id']);
+            $table->unique(['name', 'game_id']);
 
             $table->timestamps();
         });

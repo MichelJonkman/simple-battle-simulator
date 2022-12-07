@@ -1,7 +1,7 @@
-import BattlesIndex from './Components/Pages/Battles/Index.vue';
-import BattlesForm from './Components/Pages/Battles/Form.vue';
+import BattleIndex from './Components/Pages/Battle/Index.vue';
+import BattleForm from './Components/Pages/Battle/Form.vue';
 
 export const routes = [
-    { path: '/', component: BattlesIndex, name: 'battles.index' },
-    { path: '/new', component: BattlesForm, name: 'battles.new' }
+    { path: '/', component: BattleIndex, name: 'battle.index' },
+    { path: '/new', component: BattleForm, name: 'battle.new' }
 ];
