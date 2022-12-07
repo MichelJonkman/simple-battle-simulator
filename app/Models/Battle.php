@@ -9,7 +9,7 @@ class Battle extends Model
 {
     protected $fillable = [
         'name',
-        'battle_id'
+        'game_id'
     ];
 
     public function game(): BelongsTo

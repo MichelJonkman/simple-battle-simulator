@@ -3,6 +3,7 @@
 namespace App\Modules\API\Http\Controllers\Battle;
 
 use App\Http\Controllers\Controller;
+use App\Modules\API\Http\Resources\Battle\BattleResource;
 use Auth;
 
 class BattleIndexController extends Controller
@@ -11,6 +12,6 @@ class BattleIndexController extends Controller
     {
         $game = Auth::user();
 
-        return $game->battles;
+        return BattleResource::collection($game->battles);
     }
 }

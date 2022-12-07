@@ -6,7 +6,7 @@
 
 <script lang="ts" setup async>
 import Toast from "./Toasts/Toast.vue";
-import {toasts} from "../../Classes/Toasts";
+import {toasts} from "@/Classes/Toasts.js";
 </script>
 
 
